@@ -104,6 +104,8 @@ exports.deleteCourse = asyncHandler(async (req, res, next) => {
 
   await course.remove();
 
+  console.log(`Course ${req.params.id} was removed`)
+
   res.status(200).json({
     success: true,
     data: {}
