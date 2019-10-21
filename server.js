@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'development') {
 // File uploading
 app.use(fileupload());
 
-// Set static folder
+// Set static folder -> this allows us to access photos from browser
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Mount routers
