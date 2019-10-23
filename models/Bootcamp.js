@@ -97,6 +97,12 @@ const BootcampSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now
+  },
+  user: {
+    // need to add this so we know what bootcamp goes with what user
+    type: mongoose.Schema.ObjectId,
+    ref: 'User', // need so we know what model to reference
+    required: true
   }
 }, {
   toJSON: { virtuals: true },
